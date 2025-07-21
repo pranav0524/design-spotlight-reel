@@ -32,7 +32,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-primary bg-clip-text text-blue-500">
+          <h2 className="text-4xl font-bold mb-6 gradient-primary bg-clip-text text-blue-500 md:text-5xl">
             Our Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -67,7 +67,7 @@ const Services = () => {
 
         {/* CTA Section */}
         <Card className="p-8 md:p-12 bg-glass border-primary/20 shadow-glow text-center">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-secondary bg-clip-text text-blue-500">
+          <h3 className="text-2xl font-bold mb-4 gradient-secondary bg-clip-text text-blue-500 md:text-3xl">
             Ready to Transform Your Brand?
           </h3>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

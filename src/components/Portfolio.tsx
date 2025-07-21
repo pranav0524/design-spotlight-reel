@@ -81,7 +81,7 @@ const Portfolio = () => {
   return <section id="portfolio" className="py-20 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-primary bg-clip-text text-blue-500">
+          <h2 className="text-4xl font-bold mb-6 gradient-primary bg-clip-text text-blue-500 md:text-5xl">
             Our Work
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

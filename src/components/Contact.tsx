@@ -66,7 +66,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-primary bg-clip-text text-blue-500">
+          <h2 className="text-4xl font-bold mb-6 gradient-primary bg-clip-text text-blue-500 md:text-5xl">
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -78,7 +78,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
-            <h3 className="text-2xl font-bold mb-6 gradient-secondary bg-clip-text text-blue-300">
+            <h3 className="font-bold mb-6 gradient-secondary bg-clip-text text-blue-300 text-2xl">
               Send us a message
             </h3>
             
@@ -119,7 +119,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <Card className="p-8 bg-glass border-primary/20">
-              <h3 className="text-2xl font-bold mb-6 gradient-secondary bg-clip-text text-blue-300">
+              <h3 className="font-bold mb-6 gradient-secondary bg-clip-text text-blue-300 text-2xl">
                 Get in touch
               </h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -150,7 +150,7 @@ const Contact = () => {
                   <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center mx-auto mb-3">
                     <stat.icon className="h-6 w-6 text-white" />
                   </div>
-                  <div className="text-2xl font-bold gradient-primary bg-clip-text text-transparent mb-1 bg-slate-50">
+                  <div className="text-2xl font-bold gradient-primary bg-clip-text text-transparent mb-1 bg-slate-50 rounded-sm">
                     {stat.number}
                   </div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
