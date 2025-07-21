@@ -29,9 +29,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             
             <br />
-            <span className="text-foreground">
-              Excellence
-            </span>
+            <span className="text-foreground">WeFore Media</span>
             <br />
             
           </h1>
