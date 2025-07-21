@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles, Zap } from "lucide-react";
-
 const Hero = () => {
   const scrollToPortfolio = () => {
     const portfolioSection = document.getElementById('portfolio');
-    portfolioSection?.scrollIntoView({ behavior: 'smooth' });
+    portfolioSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden gradient-accent">
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden gradient-accent">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating spheres inspired by the reference designs */}
@@ -28,17 +27,13 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-            <span className="gradient-primary bg-clip-text text-transparent">
-              Creative
-            </span>
+            
             <br />
             <span className="text-foreground">
               Excellence
             </span>
             <br />
-            <span className="gradient-secondary bg-clip-text text-transparent">
-              Delivered
-            </span>
+            
           </h1>
 
           {/* Subtitle */}
@@ -49,19 +44,11 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button 
-              size="lg" 
-              className="gradient-primary text-white shadow-glow hover:shadow-glow-accent transition-smooth group px-8 py-6 text-lg"
-              onClick={scrollToPortfolio}
-            >
+            <Button size="lg" className="gradient-primary text-white shadow-glow hover:shadow-glow-accent transition-smooth group px-8 py-6 text-lg" onClick={scrollToPortfolio}>
               <Zap className="mr-2 h-5 w-5 group-hover:animate-pulse" />
               View Our Work
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-primary/30 hover:border-primary/50 hover:bg-primary/5 transition-smooth px-8 py-6 text-lg"
-            >
+            <Button size="lg" variant="outline" className="border-primary/30 hover:border-primary/50 hover:bg-primary/5 transition-smooth px-8 py-6 text-lg">
               Start Your Project
             </Button>
           </div>
@@ -69,12 +56,7 @@ const Hero = () => {
           {/* Scroll Indicator */}
           <div className="flex flex-col items-center">
             <p className="text-sm text-muted-foreground mb-4">Discover Our Portfolio</p>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="animate-bounce"
-              onClick={scrollToPortfolio}
-            >
+            <Button variant="ghost" size="icon" className="animate-bounce" onClick={scrollToPortfolio}>
               <ArrowDown className="h-5 w-5" />
             </Button>
           </div>
@@ -83,8 +65,6 @@ const Hero = () => {
 
       {/* Bottom gradient overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
