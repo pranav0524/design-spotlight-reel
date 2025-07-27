@@ -45,7 +45,7 @@ const Portfolio = () => {
     title: "Instagram Reels Collection",
     category: "reels",
     mediaType: "google-drive" as MediaType,
-    mediaUrl: "https://drive.google.com/file/d/1example_reel_collection/view",
+    mediaUrl: "https://drive.google.com/file/d/1tnXUhqmj8-DwvWXiSORSQhE0XJYdTBlm/view?usp=drive_link",
     thumbnail: "https://via.placeholder.com/400x500?text=Reels+Collection",
     description: "Engaging short-form video content for maximum reach",
     tags: ["Video", "Instagram", "Engagement"]
