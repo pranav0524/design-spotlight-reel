@@ -42,7 +42,7 @@ const Portfolio = () => {
     tags: ["Food Design", "Spicy", "Vibrant"]
   }, {
     id: 4,
-    title: "Instagram Reels Collection",
+    title: "Instagram Reels",
     category: "reels",
     mediaType: "google-drive" as MediaType,
     mediaUrl: "https://drive.google.com/file/d/1tnXUhqmj8-DwvWXiSORSQhE0XJYdTBlm/view?usp=drive_link",
