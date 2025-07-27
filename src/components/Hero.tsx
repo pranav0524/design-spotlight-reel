@@ -46,7 +46,10 @@ const Hero = () => {
               <Zap className="mr-2 h-5 w-5 group-hover:animate-pulse" />
               View Our Work
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/30 hover:border-primary/50 hover:bg-primary/5 transition-smooth px-8 py-6 text-lg">
+            <Button size="lg" variant="outline" className="border-primary/30 hover:border-primary/50 hover:bg-primary/5 transition-smooth px-8 py-6 text-lg" onClick={() => {
+              const contactSection = document.getElementById('contact');
+              contactSection?.scrollIntoView({ behavior: 'smooth' });
+            }}>
               Start Your Project
             </Button>
           </div>
