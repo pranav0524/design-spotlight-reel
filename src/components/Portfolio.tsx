@@ -2,8 +2,9 @@ import { useState, useCallback } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
+import MediaDisplay, { MediaType } from "@/components/MediaDisplay";
 import pancakePoster from "@/assets/portfolio/pancake-poster.jpg";
 import burgerPoster from "@/assets/portfolio/burger-poster.jpg";
 import honeyChilliPoster from "@/assets/portfolio/honey-chilli-poster.jpg";
@@ -19,42 +20,51 @@ const Portfolio = () => {
     id: 1,
     title: "Pancake Perfection",
     category: "posters",
-    image: pancakePoster,
+    mediaType: "image" as MediaType,
+    mediaUrl: pancakePoster,
     description: "Delicious pancake poster design for social media marketing",
     tags: ["Food Design", "Social Media", "Poster"]
   }, {
     id: 2,
-    title: "Gourmet Burger Campaign",
+    title: "Gourmet Burger Campaign", 
     category: "posters",
-    image: burgerPoster,
+    mediaType: "image" as MediaType,
+    mediaUrl: burgerPoster,
     description: "Mouth-watering burger poster for restaurant promotion",
     tags: ["Food Design", "Restaurant", "Marketing"]
   }, {
     id: 3,
     title: "Honey Chilli Delight",
-    category: "posters",
-    image: honeyChilliPoster,
+    category: "posters", 
+    mediaType: "image" as MediaType,
+    mediaUrl: honeyChilliPoster,
     description: "Spicy honey chilli poster design with vibrant colors",
     tags: ["Food Design", "Spicy", "Vibrant"]
   }, {
     id: 4,
     title: "Instagram Reels Collection",
     category: "reels",
-    image: null,
+    mediaType: "google-drive" as MediaType,
+    mediaUrl: "https://drive.google.com/file/d/1example_reel_collection/view",
+    thumbnail: "https://via.placeholder.com/400x500?text=Reels+Collection",
     description: "Engaging short-form video content for maximum reach",
     tags: ["Video", "Instagram", "Engagement"]
   }, {
     id: 5,
     title: "Brand Story Series",
     category: "stories",
-    image: null,
+    mediaType: "youtube" as MediaType,
+    mediaUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    thumbnail: "https://via.placeholder.com/400x500?text=Brand+Stories",
     description: "Creative Instagram stories that tell your brand's story",
     tags: ["Stories", "Branding", "Creative"]
   }, {
     id: 6,
     title: "Product Showcase Reel",
     category: "reels",
-    image: null,
+    mediaType: "video" as MediaType,
+    mediaUrl: "/videos/product-showcase.mp4",
+    thumbnail: "https://via.placeholder.com/400x500?text=Product+Video",
     description: "Dynamic product presentation with smooth transitions",
     tags: ["Product", "Video", "Showcase"]
   }];
@@ -115,12 +125,13 @@ const Portfolio = () => {
               {filteredItems.map((item, index) => <div key={item.id} className="flex-[0_0_350px] min-w-0">
                   <Card className="overflow-hidden border-0 shadow-soft hover-lift bg-glass group h-full">
                     <div className="relative aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
-                      {item.image ? <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-smooth" /> : <div className="w-full h-full flex items-center justify-center gradient-accent">
-                          <div className="text-center">
-                            <Play className="h-16 w-16 text-white/70 mx-auto mb-4" />
-                            <p className="text-white/90 text-lg font-medium">{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</p>
-                          </div>
-                        </div>}
+                      <MediaDisplay
+                        mediaType={item.mediaType}
+                        mediaUrl={item.mediaUrl}
+                        thumbnail={item.thumbnail}
+                        title={item.title}
+                        className="group"
+                      />
                       
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth">
