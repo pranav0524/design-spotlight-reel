@@ -33,7 +33,7 @@ const About = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {stats.map((stat, index) => <Card key={index} className="p-8 text-center bg-glass border-primary/20 hover-lift">
-              <div className="text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-gradient-primary mb-2">
                 {stat.number}
               </div>
               <div className="text-muted-foreground text-lg">{stat.label}</div>
@@ -42,7 +42,7 @@ const About = () => {
 
         {/* About Content */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 gradient-primary bg-clip-text text-transparent md:text-5xl">
+          <h2 className="text-4xl font-bold mb-6 text-gradient-primary md:text-5xl">
             About Wefore Media
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -65,7 +65,7 @@ const About = () => {
         {/* Mission Section */}
         <Card className="p-8 md:p-12 bg-glass border-primary/20 shadow-soft">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-6 gradient-secondary bg-clip-text text-transparent md:text-3xl">
+            <h3 className="text-2xl font-bold mb-6 text-gradient-secondary md:text-3xl">
               Our Mission
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
