@@ -62,7 +62,7 @@ const Contact = () => {
     number: "50+",
     label: "Projects Done"
   }];
-  return <section className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
